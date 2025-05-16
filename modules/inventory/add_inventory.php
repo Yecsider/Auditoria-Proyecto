@@ -2,6 +2,7 @@
 require_once '../../includes/config.php';
 require_once '../../includes/auth_functions.php';
 require_once '../../includes/db_connection.php';
+
 redirectIfNotLoggedIn();
 
 if (!isDigitador()) {
@@ -17,6 +18,8 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="stylesheet" href="../../assets/css/inventory.css">
+
     <meta charset="UTF-8">
     <title>Registrar Inventario</title>
 </head>
@@ -52,3 +55,4 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </form>
 </body>
 </html>
+<a href="../../index.php" class="btn-back">← Volver al inicio</a>

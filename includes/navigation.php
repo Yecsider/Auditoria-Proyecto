@@ -39,7 +39,6 @@
                     <a href="#"><i class="fas fa-user"></i> Mi Perfil <i class="fas fa-caret-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo BASE_URL; ?>modules/profile/view_profile.php"><i class="fas fa-id-card"></i> Ver Perfil</a></li>
-                        <li><a href="<?php echo BASE_URL; ?>modules/profile/edit_profile.php"><i class="fas fa-user-edit"></i> Editar Perfil</a></li>
                         <li><a href="<?php echo BASE_URL; ?>modules/profile/change_password.php"><i class="fas fa-key"></i> Cambiar Contraseña</a></li>
                     </ul>
                 </li>
