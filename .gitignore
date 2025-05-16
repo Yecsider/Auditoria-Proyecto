@@ -1,0 +1,15 @@
+# Archivos temporales
+*.log
+*.tmp
+
+# Archivos de entorno
+.env
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# XAMPP y config locales
+xampp/
+*.bak
+*.swp

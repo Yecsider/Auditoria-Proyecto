@@ -4,6 +4,11 @@ require_once 'db_connection.php';
 function isAdminOrManager() {
     return $_SESSION['role_name'] === 'Administrador' || $_SESSION['role_name'] === 'Gerente';
 }
+
+function isDigitador() {
+    return isset($_SESSION['role_id']) && $_SESSION['role_id'] == 8;
+}
+
 // includes/auth_functions.php
 
 function loginUser($username, $password) {

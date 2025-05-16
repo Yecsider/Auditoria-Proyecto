@@ -58,36 +58,26 @@
                 <?php endif; ?>
             </ul>
         </div>
+        <?php if (isDigitador()): ?>
+        <li class="<?php echo strpos($_SERVER['PHP_SELF'], 'inventory') !== false ? 'active' : ''; ?>">
+            <a href="<?php echo BASE_URL; ?>modules/inventory/add_inventory.php"><i class="fas fa-box"></i> Inventario</a>
+        </li>
+        <?php endif; ?>
 
         <!-- Acciones de usuario alineadas a la derecha -->
         <div class="user-actions">
             <?php if (isLoggedIn()): ?>
-                <div class="user-dropdown">
-                    <button class="user-toggle">
-                        <span class="user-avatar">
-                            <?php echo strtoupper(substr(htmlspecialchars($_SESSION['first_name']), 0, 1)); ?>
-                        </span>
-                        <span class="user-name"><?php echo htmlspecialchars($_SESSION['first_name']); ?></span>
-                        <i class="fas fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-menu">
-                        <a href="<?php echo BASE_URL; ?>modules/profile/view_profile.php">
-                            <i class="fas fa-user"></i> Mi Perfil
-                        </a>
-                        <a href="<?php echo BASE_URL; ?>modules/profile/change_password.php">
-                            <i class="fas fa-key"></i> Cambiar Contraseña
-                        </a>
-                        <a href="<?php echo BASE_URL; ?>logout.php" class="logout-link">
-                            <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
-                        </a>
-                    </div>
-                </div>
+                <span class="user-name"><?php echo htmlspecialchars($_SESSION['first_name']); ?></span>
+                <a href="<?php echo BASE_URL; ?>logout.php" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </a>
             <?php else: ?>
                 <a href="<?php echo BASE_URL; ?>login.php" class="login-btn">
                     <i class="fas fa-sign-in-alt"></i> Ingresar
                 </a>
             <?php endif; ?>
         </div>
+
 
         <!-- Botón para menú móvil -->
         <button class="mobile-menu-toggle" aria-label="Menú">
